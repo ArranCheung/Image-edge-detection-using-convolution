@@ -75,20 +75,6 @@ namespace Convolution
 
         static void SaveImage(string name)
         {
-            //// Normalise the argb colours
-            //double min = double.MaxValue, max = double.MinValue;
-
-            //for (int i = 0; i < imageAfter.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < imageAfter.GetLength(1); j++)
-            //    {
-            //        double val = imageAfter[i, j];
-            //        if (val < min) min = val;
-            //        if (val > max) max = val;
-            //    }
-            //}
-
-
             Bitmap output = new Bitmap(imageAfter.GetLength(1), imageAfter.GetLength(0));
 
             for (int i = 0; i < imageAfter.GetLength(0); i++)
@@ -233,6 +219,7 @@ namespace Convolution
             Console.WriteLine("Enter the name of your image");
             string name = Console.ReadLine();
             SaveImage(name);
+            Console.WriteLine("Image saved");
 
             Console.ReadKey();
         }
